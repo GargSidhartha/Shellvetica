@@ -1,29 +1,30 @@
-# Shellvetica: A SimpleShell in C
-Instructor: Vivek Kumar </br>
-Submitted by:
+
+# 🐚 Shellvetica: A SimpleShell in C
+
+**Instructor:** Vivek Kumar
+
+**Submitted by:**
 - Saksham Singh - 2022434
 - Sidhartha Garg - 2022499
 
-This documentation explains the structure and functionality of a simple shell implementation in C. The code allows users to execute shell commands, pipe commands, and provides basic command history functionality.
-
-## Table of Contents
+## 📜 Table of Contents
 
 - [Assignment 02 - Group 50 - Shellvetica: A SimpleShell in C](#assignment-02---group-50---shellvetica-a-simpleshell-in-c)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Usage](#usage)
-  - [Code Structure](#code-structure)
-  - [Functions](#functions)
-    - [init\_shell()](#init_shell)
+  - [📜 Table of Contents](#-table-of-contents)
+  - [🚀 Introduction](#-introduction)
+  - [🔧 Usage](#-usage)
+  - [📁 Code Structure](#-code-structure)
+  - [🛠️ Functions](#️-functions)
+    - [init_shell()](#init_shell)
     - [launch()](#launch)
-    - [cntrl\_cHandler()](#cntrl_chandler)
+    - [cntrl_cHandler()](#cntrl_chandler)
     - [execute()](#execute)
-    - [execute\_pip()](#execute_pip)
+    - [execute_pip()](#execute_pip)
     - [shInterpreter()](#shinterpreter)
-  - [Main Function](#main-function)
-  - [Contribution](#contribution)
+  - [🚀 Main Function](#-main-function)
+  - [👥 Contribution](#-contribution)
 
-## Introduction
+## 🚀 Introduction
 
 This C code implements a basic shell with the following features:
 
@@ -32,35 +33,36 @@ This C code implements a basic shell with the following features:
 - Piping multiple commands
 - Command history
 
-## Usage
+## 🔧 Usage
 
-1. Compile and run the code:
+1. **Compile and run the code:**
 
-   ```shell
+   shell
    make run_shell
+   
 
-2. Welcome to the shell
-   -  The shell will accept all the externally defined commands in `/usr/bin` with their appropriate flags and syntax
-   -  The shell will also accept appropriate ELF executables and run them with with their said arguments
-   -  The shell is also capable of running bash scripts compatible with the OS accordingly
-   -  The shell can handle pipes (`|`) and ampersand (`&`) operations
-   -  The start time and execution times are in the unit of clock ticks - which are dependent on the machine running the process, and the PIDs are corresponding to the machine's PID counter
-   -  The following internal commands are handled:
-      -  `exit` : exits the shell and gives data of all the executed processes
-      -  `history` : prints the list of all the commands entered
-   -  The following commands are known to not work because of not being present in `/usr/bin` and being internally coded, and were not implemented in this shell for the reason of being outside the scope of this assignment
-      -  `cd`
-  
-3. `fib.c` can be compiled to `./fib` by
+2. **Welcome to the shell:**
+   - The shell accepts externally defined commands from `/usr/bin` with appropriate flags and syntax.
+   - It runs ELF executables and bash scripts compatible with the OS.
+   - Supports pipes (`|`) and background processes (`&`).
+   - Internal commands handled:
+     - `exit`: exits the shell and provides data of executed processes.
+     - `history`: prints the list of all entered commands.
+   - Note: `cd` command not implemented.
+
+3. **Compile `fib.c` to `./fib`:**
+
    ```shell
    make fib
-  
-4. Cleanup by
-    ```shell
-    make clean
+   ```
 
+4. **Cleanup:**
 
-## Code Structure
+   ```shell
+   make clean
+   ```
+
+## 📁 Code Structure
 
 The code is structured as follows:
 
@@ -72,7 +74,7 @@ The code is structured as follows:
 - The `execute_pip()` function handles the execution of piped commands. It splits the input command into individual commands based on the "|" delimiter and executes them sequentially, passing the output from one command as input to the next.
 - The `shInterpreter()` function reads and executes shell script files.
 
-## Functions
+## 🛠️ Functions
 
 ### init_shell()
 
@@ -98,6 +100,11 @@ The `execute_pip()` function handles the execution of piped commands. It splits 
 
 The `shInterpreter()` function reads and executes shell script files. It reads the contents of a shell script file line by line and executes each line as a command.
 
-## Main Function
+## 🚀 Main Function
 
 The `main()` function is the entry point of the shell. It repeatedly prompts the user for input, reads commands, and executes them. It also maintains a history of commands.
+
+## 👥 Contribution
+
+This project was developed collaboratively by Saksham Singh and Sidhartha Garg for the course Operating Systems under the guidance of Instructor Vivek Kumar.
+

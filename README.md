@@ -101,10 +101,3 @@ The `shInterpreter()` function reads and executes shell script files. It reads t
 ## Main Function
 
 The `main()` function is the entry point of the shell. It repeatedly prompts the user for input, reads commands, and executes them. It also maintains a history of commands.
-
-## Contribution
-- All the work was collectively and equally done by both the participants Sidhartha Garg and Saksham Singh
-- The code programming and compilation for the shell was collectively discussed and executed.
-- Code compilation was carried on Sidhartha Garg's Intel based machine, but were known to work just as well on Saksham Singh's ARM based machine.
-- Bonus one was handled by Sidhartha Garg, Bonus two by Saksham Singh
-- GitHub repo : https://github.com/SakshxmSingh/CSE231_OS_GroupAss
